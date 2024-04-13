@@ -8,11 +8,15 @@ export default function Textfomr(props) {
         // console.log(text)
         let textChnage = text.toUpperCase();
         setText(textChnage);
+        props.showAlert("Converted to Upper Case","success");
+
     }
     const converLoCase = () => {
         // console.log(text)
         let textChnage = text.toLowerCase();
         setText(textChnage);
+        props.showAlert("Converted to Lower Case","success");
+
     }
 
     const clearText = () => {
