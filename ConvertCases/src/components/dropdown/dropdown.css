@@ -1,0 +1,45 @@
+.selectOption{
+    /* border: 1px solid red; */
+    width: 250px;
+    height: 40px;
+    color: gray;
+    font-weight: 600;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+}
+.currencySwap{
+    /* border: 2px solid red; */
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ccc;
+}
+.amountEnter{
+    /* border: 1px solid red; */
+    margin-top: 15px;
+
+}
+.amountFiled{
+    /* border: 2px solid red; */
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px 0 0;
+}
+.amountEnter input{
+    border: 1px solid #ccc;
+    outline: none;
+    width: 170px;
+    height: 40px;
+    padding: 0 7px;
+    margin-left: 15px;
+}
+.currencyConvertor{
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    background: #24a0ed;
+    color: #ffffff;
+    margin-top: 15px;
+}
