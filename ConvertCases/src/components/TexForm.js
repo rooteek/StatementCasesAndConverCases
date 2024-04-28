@@ -8,14 +8,14 @@ export default function Textfomr(props) {
         // console.log(text)
         let textChnage = text.toUpperCase();
         setText(textChnage);
-        props.showAlert("Converted to Upper Case","success");
+        props.showAlert("Converted to Upper Case","Success",);
 
     }
     const converLoCase = () => {
         // console.log(text)
         let textChnage = text.toLowerCase();
         setText(textChnage);
-        props.showAlert("Converted to Lower Case","success");
+        props.showAlert("Converted to Lower Case","Success");
 
     }
 
@@ -28,10 +28,12 @@ export default function Textfomr(props) {
     }
 
     const copyOnClick = () => {
-        let text = document.getElementById('myBox');
-        text.select();
+        // let text = document.getElementById('myBox');
+        // text.select();
         //    navigator.clipboard.writeText(text.value);
-        document.execCommand("copy");
+        navigator.clipboard.writeText(text);
+        // document.getSelection().removeAllRanges();
+        // document.execCommand("copy");
     }
 
     const speachBtn=()=>{
@@ -56,7 +58,9 @@ export default function Textfomr(props) {
             <button className='btn btn-success me-2' onClick={copyOnClick}>Copy</button>
             <div className='container my-3'>
                 <h1>You Text Summary</h1>
-                <p>{text.split(" ")[text.split(" ").length - 1] === "" ? text.split(" ").length - 1 : text.split(" ").length} words and {text.length} characters</p>
+                {/* <p>{text.split(" ")[text.split(" ").length - 1] === "" ? text.split(" ").length - 1 : text.split(" ").length} words and {text.length} characters</p> */}
+                <p>{text.split(/\s+/).filter((e)=>{return e.length!==0}).length} words and {text.length} characters</p>
+
                 <p>{text}</p>
             </div>
         </div>
